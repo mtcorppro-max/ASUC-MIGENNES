@@ -109,6 +109,7 @@ ul   { list-style: none; }
 }
 .section__pill--light { border-color: rgba(255,255,255,.45); color: rgba(255,255,255,.8); }
 .section__pill--center { display: flex; width: fit-content; margin: 0 auto 1.25rem; }
+.section__pill-icon { width: 14px; height: 14px; object-fit: contain; }
 
 .section__title {
     font-family: var(--font-h);
