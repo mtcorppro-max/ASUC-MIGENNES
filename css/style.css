@@ -187,6 +187,11 @@ ul   { list-style: none; }
 }
 .nav__link:hover { color: var(--blue); background: rgba(255,255,255,.06); }
 
+/* éléments mobiles cachés sur desktop */
+.nav__menu-header,
+.nav__menu-footer,
+.nav__link i { display: none; }
+
 .nav__cta {
     background: var(--blue);
     color: var(--white);
