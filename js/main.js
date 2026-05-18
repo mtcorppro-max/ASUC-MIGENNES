@@ -201,12 +201,27 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
         });
     });
 
-    // Swipe tactile
+    // Swipe + tap tactile
     let touchX = 0;
-    stage.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-    stage.addEventListener('touchend',   e => {
-        const d = touchX - e.changedTouches[0].clientX;
-        if (Math.abs(d) > 50) { goTo(active + (d > 0 ? 1 : -1)); resetAuto(); }
+    let touchY = 0;
+    stage.addEventListener('touchstart', e => {
+        touchX = e.touches[0].clientX;
+        touchY = e.touches[0].clientY;
+    }, { passive: true });
+    stage.addEventListener('touchend', e => {
+        const dx = touchX - e.changedTouches[0].clientX;
+        const dy = touchY - e.changedTouches[0].clientY;
+        if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)) {
+            // swipe horizontal
+            goTo(active + (dx > 0 ? 1 : -1));
+            resetAuto();
+        } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+            // tap : moitié droite = suivant, moitié gauche = précédent
+            const rect = stage.getBoundingClientRect();
+            const tapX = e.changedTouches[0].clientX - rect.left;
+            goTo(active + (tapX > rect.width / 2 ? 1 : -1));
+            resetAuto();
+        }
     });
 
     // Pause au survol
