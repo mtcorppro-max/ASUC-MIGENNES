@@ -1339,7 +1339,7 @@ ul   { list-style: none; }
     .nav__menu-reserve:hover { background: var(--blue-dk); color: var(--white); }
 
     .nav__cta { display: none; }
-    .nav__hamburger { display: flex; z-index: 1000; }
+    .nav__hamburger { display: flex; z-index: 1000; margin-left: auto; }
 
     .hero__cards { display: none; }
     .hero__title { font-size: clamp(2.8rem, 14vw, 5rem); }
