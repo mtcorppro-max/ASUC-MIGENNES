@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 148">
+  <!-- Tête de raquette -->
+  <rect x="6" y="5" width="88" height="86" rx="36" fill="currentColor"/>
+
+  <!-- Trous (grille blanche) -->
+  <circle cx="38" cy="23" r="3.8" fill="white"/>
+  <circle cx="50" cy="23" r="3.8" fill="white"/>
+  <circle cx="62" cy="23" r="3.8" fill="white"/>
+
+  <circle cx="26" cy="35" r="3.8" fill="white"/>
+  <circle cx="38" cy="35" r="3.8" fill="white"/>
+  <circle cx="50" cy="35" r="3.8" fill="white"/>
+  <circle cx="62" cy="35" r="3.8" fill="white"/>
+  <circle cx="74" cy="35" r="3.8" fill="white"/>
+
+  <circle cx="26" cy="47" r="3.8" fill="white"/>
+  <circle cx="38" cy="47" r="3.8" fill="white"/>
+  <circle cx="50" cy="47" r="3.8" fill="white"/>
+  <circle cx="62" cy="47" r="3.8" fill="white"/>
+  <circle cx="74" cy="47" r="3.8" fill="white"/>
+
+  <circle cx="26" cy="59" r="3.8" fill="white"/>
+  <circle cx="38" cy="59" r="3.8" fill="white"/>
+  <circle cx="50" cy="59" r="3.8" fill="white"/>
+  <circle cx="62" cy="59" r="3.8" fill="white"/>
+  <circle cx="74" cy="59" r="3.8" fill="white"/>
+
+  <circle cx="26" cy="71" r="3.8" fill="white"/>
+  <circle cx="38" cy="71" r="3.8" fill="white"/>
+  <circle cx="50" cy="71" r="3.8" fill="white"/>
+  <circle cx="62" cy="71" r="3.8" fill="white"/>
+  <circle cx="74" cy="71" r="3.8" fill="white"/>
+
+  <circle cx="38" cy="83" r="3.8" fill="white"/>
+  <circle cx="50" cy="83" r="3.8" fill="white"/>
+  <circle cx="62" cy="83" r="3.8" fill="white"/>
+
+  <!-- Gorge -->
+  <path d="M38,91 L44,113 L56,113 L62,91 Z" fill="currentColor"/>
+
+  <!-- Manche -->
+  <rect x="43" y="111" width="14" height="32" rx="5" fill="currentColor"/>
+</svg>

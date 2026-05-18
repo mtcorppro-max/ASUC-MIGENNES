@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tennis Club de Migennes – Tennis & Padel en Yonne (89). Loisir et compétition. Réservez vos courts en ligne sur Tenup.">
+    <title>Tennis Club de Migennes | Tennis & Padel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,700;1,900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========================================
+     NAVIGATION FLOTTANTE (pill)
+======================================== -->
+<header class="header" id="header">
+    <div class="nav-wrap">
+        <nav class="nav" id="nav">
+            <a href="#accueil" class="nav__logo">
+                <img src="images/logomi.png" alt="TC Migennes" class="nav__logo-img">
+                <span class="nav__logo-name">ASUC <strong>Migennes</strong></span>
+            </a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#accueil"    class="nav__link">Accueil</a></li>
+                <li><a href="#tennis"     class="nav__link">Tennis</a></li>
+                <li><a href="#padel"         class="nav__link">Padel</a></li>
+                <li><a href="#inscriptions" class="nav__link">Inscriptions</a></li>
+                <li><a href="#club-house"   class="nav__link">Club House</a></li>
+                <li><a href="#equipe"     class="nav__link">Notre Équipe</a></li>
+                <li><a href="#galerie"    class="nav__link">Galerie</a></li>
+                <li><a href="#actualites" class="nav__link">Avis</a></li>
+                <li><a href="#contact"    class="nav__link">Contact</a></li>
+            </ul>
+
+            <a href="#" class="nav__cta" id="reserveBtn">Réserver un court</a>
+
+            <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- ========================================
+     HERO
+======================================== -->
+<section class="hero" id="accueil">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+        <div class="container">
+            <div class="hero__inner">
+                <span class="hero__eyebrow">
+                    <i class="fas fa-map-marker-alt"></i> Migennes · Yonne (89)
+                </span>
+                <h1 class="hero__title">
+                    Tennis<br>
+                    &amp; Padel<br>
+                    <em>à Migennes</em>
+                </h1>
+                <p class="hero__desc">Loisir &amp; Compétition · Tous niveaux · Depuis des années</p>
+                <div class="hero__actions">
+                    <a href="#" class="btn-cto btn-cto--hero" id="heroReserveBtn">
+                        <span class="btn-cto__text">Réserver un court</span>
+                        <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cartes de stats flottantes -->
+    <div class="hero__cards">
+        <div class="hero__card">
+            <div class="hero__card-top">
+                <div class="hero__card-icon">
+                    <img src="images/tennis-icon.svg" alt="">
+                </div>
+                <p class="hero__card-caption">Extérieurs &amp; couverts</p>
+            </div>
+            <span class="hero__card-num">5<sup>+</sup></span>
+            <span class="hero__card-label">Courts de tennis</span>
+        </div>
+        <div class="hero__card hero__card--white">
+            <div class="hero__card-top">
+                <div class="hero__card-icon">
+                    <img src="images/padel-icon.svg" alt="">
+                </div>
+                <p class="hero__card-caption">Gazon synthétique semi-couvert</p>
+            </div>
+            <span class="hero__card-num">2<sup>+</sup></span>
+            <span class="hero__card-label">Pistes de padel</span>
+        </div>
+    </div>
+
+    <!-- Bande partenaires défilante -->
+    <div class="hero__partners">
+        <div class="hero__partners-label">NOS PARTENAIRES</div>
+        <div class="hero__partners-track-wrap">
+            <div class="hero__partners-track">
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 1</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 2</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 3</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 4</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 5</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 6</span>
+                <!-- Doublon pour la boucle infinie -->
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 1</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 2</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 3</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 4</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 5</span>
+                <span class="hero__partner"><i class="fas fa-handshake"></i> Partenaire 6</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     À PROPOS + 3 ATOUTS
+======================================== -->
+<section class="about section" id="about">
+    <div class="container">
+
+        <!-- Ligne principale : texte | photo -->
+        <div class="about__row">
+            <div class="about__left reveal">
+                <span class="section__pill">À propos du club</span>
+                <h2 class="section__title">Bienvenue au Tennis Club<br>de Migennes</h2>
+                <p class="section__text">Situé au Stade Lucien Masson à Migennes dans l'Yonne, notre club vous accueille pour la pratique du tennis et du padel, en loisir comme en compétition, pour tous les âges et niveaux.</p>
+                <a href="#" class="btn-cto" id="aboutBtn">
+                    <span class="btn-cto__text">Découvrir le club</span>
+                    <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="about__right reveal">
+                <div class="about__photo">
+                    <div class="about__photo-fb">
+                        <i class="fas fa-image"></i>
+                        <span>images/about.jpg</span>
+                    </div>
+                    <img src="images/imageaccueil.avif" alt="Tennis Club de Migennes" onerror="this.style.opacity='0'">
+                    <div class="about__photo-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Stade Lucien Masson</strong>
+                            <span>Rue Yves du Manoir · 89400 Migennes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ligne des 3 atouts -->
+        <div class="features__grid">
+            <div class="features__item reveal">
+                <div class="features__icon-wrap">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="features__title">Loisir &amp; Compétition</h3>
+                <p class="features__text">Notre club propose des activités pour tous les profils : joueurs de loisir, compétiteurs en équipe, jeunes et seniors.</p>
+                <button class="features__more" aria-label="En savoir plus"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="features__item reveal">
+                <div class="features__icon-wrap">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="features__title">Cours &amp; Coaching</h3>
+                <p class="features__text">Dylan Rivière, enseignant diplômé, assure les cours et stages pour débutants comme pour les joueurs confirmés.</p>
+                <button class="features__more" aria-label="En savoir plus"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="features__item reveal">
+                <div class="features__icon-wrap">
+                    <i class="fas fa-wheelchair"></i>
+                </div>
+                <h3 class="features__title">Accessible à tous</h3>
+                <p class="features__text">Terrains, club house, vestiaires et douches entièrement accessibles aux personnes à mobilité réduite.</p>
+                <button class="features__more" aria-label="En savoir plus"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================================
+     TENNIS (fond sombre)
+======================================== -->
+<section class="sport-dark section" id="tennis">
+    <div class="container">
+        <div class="sport__grid">
+            <div class="sport__visual reveal">
+                <div class="sport__img">
+                    <div class="sport__img-fb"><i class="fas fa-tennis-ball fa-3x"></i><small>images/tennis.jpg</small></div>
+                    <img src="images/tennisterrainmigennes.webp" alt="Courts de tennis de Migennes" onerror="this.style.opacity='0'">
+                </div>
+            </div>
+            <div class="sport__content reveal">
+                <span class="section__pill section__pill--light">
+                    <i class="fas fa-tennis-ball"></i> Tennis
+                </span>
+                <h2 class="section__title section__title--light">5 courts pour jouer<br>toute l'année</h2>
+                <p class="section__text section__text--light">Béton poreux en extérieur ou résine en salle, nos courts vous permettent de jouer quelle que soit la météo. Des infrastructures modernes au service de votre progression.</p>
+                <div class="sport__courts">
+                    <div class="sport__court">
+                        <span class="sport__court-dot"></span>
+                        <div>
+                            <strong>Béton poreux</strong>
+                            <em>3 terrains extérieurs</em>
+                        </div>
+                    </div>
+                    <div class="sport__court">
+                        <span class="sport__court-dot"></span>
+                        <div>
+                            <strong>Résine</strong>
+                            <em>2 terrains couverts</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-cto btn-cto--hero" id="tennisBtnReserve">
+                    <span class="btn-cto__text">Réserver un court</span>
+                    <span class="btn-cto__circle btn-cto__circle--lime"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     PADEL (fond blanc)
+======================================== -->
+<section class="sport-light section" id="padel">
+    <div class="container">
+        <div class="sport__grid sport__grid--rev">
+            <div class="sport__content reveal">
+                <span class="section__pill">
+                    <i class="fas fa-table-tennis-paddle-ball"></i> Padel
+                </span>
+                <h2 class="section__title">Le padel<br>à Migennes !</h2>
+                <p class="section__text">Découvrez ou perfectionnez votre jeu de padel sur nos 2 pistes semi-couvertes en gazon synthétique. Sport convivial et accessible à tous, le padel mêle technique et esprit d'équipe.</p>
+                <div class="padel__tags">
+                    <span><i class="fas fa-users"></i> Sport en double</span>
+                    <span><i class="fas fa-cloud-sun"></i> Semi-couvert</span>
+                    <span><i class="fas fa-star"></i> Tous niveaux</span>
+                </div>
+                <div class="sport__courts sport__courts--dark">
+                    <div class="sport__court sport__court--dark">
+                        <span class="sport__court-dot sport__court-dot--dark"></span>
+                        <div>
+                            <strong>Gazon synthétique</strong>
+                            <em>2 pistes semi-couvertes</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-cto" id="padelBtnReserve">
+                    <span class="btn-cto__text">Réserver une piste</span>
+                    <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="sport__visual reveal">
+                <div class="sport__img sport__img--padel">
+                    <div class="sport__img-fb"><i class="fas fa-table-tennis-paddle-ball fa-3x"></i><small>images/padel.jpg</small></div>
+                    <img src="images/padelmigennes.jpg" alt="Pistes de padel de Migennes" onerror="this.style.opacity='0'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     ÉQUIPEMENTS (fond clair)
+======================================== -->
+<section class="members section" id="membres">
+    <div class="container">
+        <div class="members__row">
+
+            <!-- Photos empilées côté gauche -->
+            <div class="members__photos reveal">
+                <div class="members__photo members__photo--top">
+                    <img src="images/team/PHOTO1.jpg" alt="Joueurs TC Migennes">
+                </div>
+                <div class="members__photo members__photo--bottom">
+                    <img src="images/team/PHOTO7.jpg" alt="Ambiance TC Migennes">
+                </div>
+            </div>
+
+            <!-- Texte + stats côté droit -->
+            <div class="members__content">
+                <div class="members__card reveal">
+                    <span class="section__pill">
+                        <i class="fas fa-users"></i> Notre communauté
+                    </span>
+                    <h2 class="section__title">Un club qui<br><em>grandit chaque année</em></h2>
+                    <p class="section__text">Tennis et padel pour tous les niveaux, de 6 à 77 ans. Loisir ou compétition, nos équipes d'adultes et de jeunes évoluent chaque saison dans un esprit convivial au cœur de Migennes.</p>
+                    <a href="#inscriptions" class="btn-cto">
+                        <span class="btn-cto__text">Nous rejoindre</span>
+                        <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+
+                <div class="members__stats reveal">
+                    <div class="members__stat">
+                        <span class="members__num"><span class="counter" data-target="161">0</span><sup>+</sup></span>
+                        <span class="members__label">Membres</span>
+                    </div>
+                    <div class="members__stat">
+                        <span class="members__num"><span class="counter" data-target="36">0</span><sup>+</sup></span>
+                        <span class="members__label">Jeunes</span>
+                    </div>
+                    <div class="members__stat">
+                        <span class="members__num"><span class="counter" data-target="125">0</span><sup>+</sup></span>
+                        <span class="members__label">Adultes</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     INSCRIPTIONS & TARIFS
+======================================== -->
+<section class="tarifs section" id="inscriptions">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__pill section__pill--center">
+                <i class="fas fa-id-card"></i> Inscriptions
+            </span>
+            <h2 class="section__title section__title--center">Rejoignez le club</h2>
+            <p class="tarifs__lead">Saison 2025–2026 · Stade Lucien Masson, Migennes</p>
+        </div>
+
+        <!-- Onglets sport -->
+        <div class="tarifs__tabs reveal">
+            <button class="tarifs__tab active" data-tab="tennis">
+                <img src="images/tennis-icon.svg" class="tarifs__tab-padel" alt="Tennis"> Tennis
+            </button>
+            <button class="tarifs__tab" data-tab="padel">
+                <img src="images/padel-icon.svg" class="tarifs__tab-padel" alt="Padel"> Padel
+            </button>
+            <button class="tarifs__tab" data-tab="combo">
+                <img src="images/tennis-icon.svg" class="tarifs__tab-padel" alt="">
+                <img src="images/padel-icon.svg" class="tarifs__tab-padel" alt=""> Tennis + Padel
+            </button>
+        </div>
+
+        <!-- ── TENNIS ── -->
+        <div class="tarifs__panel active" id="tab-tennis">
+            <div class="tarifs__grid">
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge">Adultes</span>
+                        <i class="fas fa-user tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>100 €</strong></li>
+                        <li><span>Cours collectifs 28 × 1h30</span><strong>210 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card tarifs__card--featured reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--blue">–18 ans &amp; Étudiants</span>
+                        <i class="fas fa-graduation-cap tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>90 €</strong></li>
+                        <li><span>Cours collectifs 28 × 1h</span><strong>110 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--green">–12 ans</span>
+                        <i class="fas fa-child tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>30 €</strong></li>
+                        <li><span>Cours collectifs 28 × 1h</span><strong>110 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── PADEL ── -->
+        <div class="tarifs__panel" id="tab-padel">
+            <div class="tarifs__grid">
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge">Adultes</span>
+                        <i class="fas fa-user tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>136 €</strong></li>
+                        <li><span>Cours collectifs 20 × 1h</span><strong>170 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                        <li><span>Location terrain (non licencié)</span><strong>24 €/h</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card tarifs__card--featured reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--blue">–18 ans &amp; Étudiants</span>
+                        <i class="fas fa-graduation-cap tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>90 €</strong></li>
+                        <li><span>Cours collectifs 20 × 1h</span><strong>150 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--green">–12 ans</span>
+                        <i class="fas fa-child tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>58 €</strong></li>
+                        <li><span>Cours collectifs 20 × 1h</span><strong>122 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>25 €</strong></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── TENNIS + PADEL ── -->
+        <div class="tarifs__panel" id="tab-combo">
+            <div class="tarifs__grid">
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge">Adultes</span>
+                        <i class="fas fa-user tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>180 €</strong></li>
+                        <li><span>Cours collectifs 28+20 séances</span><strong>380 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card tarifs__card--featured reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--blue">–18 ans &amp; Étudiants</span>
+                        <i class="fas fa-graduation-cap tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>140 €</strong></li>
+                        <li><span>Cours collectifs 28+20 séances</span><strong>260 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+                <div class="tarifs__card reveal">
+                    <div class="tarifs__card-head">
+                        <span class="tarifs__badge tarifs__badge--green">–12 ans</span>
+                        <i class="fas fa-child tarifs__icon"></i>
+                    </div>
+                    <ul class="tarifs__list">
+                        <li><span>Licence + accès terrains</span><strong>60 €</strong></li>
+                        <li><span>Cours collectifs 28+20 séances</span><strong>232 €</strong></li>
+                        <li><span>Cours individuel 1h</span><strong>30 €</strong></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact coach + CTA -->
+        <div class="tarifs__footer reveal">
+            <p class="tarifs__contact">
+                <i class="fas fa-phone"></i>
+                Pour tout renseignement, contacter notre coach
+                <strong>Dylan RIVIÈRE</strong> au
+                <a href="tel:0637743044">06.37.74.30.44</a>
+            </p>
+            <a href="#" class="btn-cto" id="tarifsReserveBtn">
+                <span class="btn-cto__text">S'inscrire en ligne</span>
+                <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================================
+     CLUB HOUSE (fond sombre + photo)
+======================================== -->
+<section class="clubhouse section" id="club-house">
+    <div class="container">
+        <div class="sport__grid">
+            <div class="sport__visual reveal">
+                <div class="sport__img">
+                    <img src="images/team/PHOTO5.jpg" alt="Club House TC Migennes">
+                </div>
+            </div>
+            <div class="sport__content reveal">
+                <span class="section__pill section__pill--light">Club House</span>
+                <h2 class="section__title section__title--light">Un espace de vie<br>convivial</h2>
+                <p class="section__text section__text--light">Notre club house est le cœur de la vie du club. Idéal pour se retrouver après un match, partager un verre et suivre les matchs en direct sur grand écran.</p>
+                <div class="clubhouse__features">
+                    <div class="clubhouse__feat">
+                        <i class="fas fa-tv"></i><span>Écran TV</span>
+                    </div>
+                    <div class="clubhouse__feat">
+                        <i class="fas fa-wifi"></i><span>Wi-Fi gratuit</span>
+                    </div>
+                    <div class="clubhouse__feat">
+                        <i class="fas fa-mug-hot"></i><span>Espace détente</span>
+                    </div>
+                    <div class="clubhouse__feat">
+                        <i class="fas fa-sun"></i><span>Terrasse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     ÉQUIPE
+======================================== -->
+<section class="team section" id="equipe">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__pill section__pill--center">Notre équipe</span>
+            <h2 class="section__title section__title--center">L'équipe du club</h2>
+        </div>
+
+        <h3 class="team__sub reveal">Équipe dirigeante</h3>
+        <div class="team__grid">
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/jean-charles-pottier.jpg" alt="Jean Charles POTTIER" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Jean Charles POTTIER</h4>
+                <p class="team__role">Président</p>
+                <p class="team__sub-role">Resp. Compétition · Tennis Féminin · Trésorier</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/caroline-brelaud.jpg" alt="Caroline BRELAUD COLOMINA" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Caroline BRELAUD COLOMINA</h4>
+                <p class="team__role">Secrétaire Général</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/olivier-lamarche.jpg" alt="Olivier LAMARCHE" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Olivier LAMARCHE</h4>
+                <p class="team__role">Vice-Président</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/bernard-esnault.jpg" alt="Bernard ESNAULT" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Bernard ESNAULT</h4>
+                <p class="team__role">Secrétaire Général Adjoint</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/nicolas-brelaud.jpg" alt="Nicolas BRELAUD" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Nicolas BRELAUD</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/arnaud-gallou.jpg" alt="Arnaud GALLOU" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Arnaud GALLOU</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/lucie-gallou.jpg" alt="Lucie GALLOU" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Lucie GALLOU</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/pierre-grossier.jpg" alt="Pierre GROSSIER" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Pierre GROSSIER</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/albane-pottier.jpg" alt="Albane POTTIER" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Albane POTTIER</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/nathalie-pottier.jpg" alt="Nathalie POTTIER" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Nathalie POTTIER</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+            <div class="team__card reveal">
+                <div class="team__avatar">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/nicolas-pottier.jpg" alt="Nicolas POTTIER" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Nicolas POTTIER</h4>
+                <p class="team__role">Membre</p>
+            </div>
+
+        </div>
+
+        <h3 class="team__sub team__sub--spaced reveal">Équipe pédagogique</h3>
+        <div class="team__grid team__grid--center">
+            <div class="team__card team__card--star reveal">
+                <div class="team__avatar team__avatar--lg">
+                    <div class="team__avatar-bg"><i class="fas fa-user"></i></div>
+                    <img src="images/team/dylan-riviere.jpg" alt="Dylan RIVIERE" onerror="this.style.opacity='0'">
+                </div>
+                <h4 class="team__name">Dylan RIVIERE</h4>
+                <p class="team__role">Enseignant tous publics</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================================
+     GALERIE PHOTOS
+======================================== -->
+<section class="gallery section" id="galerie">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__pill section__pill--center">
+                <i class="fas fa-images"></i> Galerie
+            </span>
+            <h2 class="section__title section__title--center">La vie du club en images</h2>
+        </div>
+
+        <div class="cstack" id="galleryStack">
+            <div class="cstack__stage">
+                <div class="cstack__card" data-idx="0"><img src="images/team/PHOTO1.jpg"  alt="Photo 1"  draggable="false"></div>
+                <div class="cstack__card" data-idx="1"><img src="images/team/PHOTO2.jpg"  alt="Photo 2"  draggable="false"></div>
+                <div class="cstack__card" data-idx="2"><img src="images/team/PHOTO3.jpg"  alt="Photo 3"  draggable="false"></div>
+                <div class="cstack__card" data-idx="3"><img src="images/team/PHOTO4.jpg"  alt="Photo 4"  draggable="false"></div>
+                <div class="cstack__card" data-idx="4"><img src="images/team/PHOTO5.jpg"  alt="Photo 5"  draggable="false"></div>
+                <div class="cstack__card" data-idx="5"><img src="images/team/PHOTO6.jpg"  alt="Photo 6"  draggable="false"></div>
+                <div class="cstack__card" data-idx="6"><img src="images/team/PHOTO7.jpg"  alt="Photo 7"  draggable="false"></div>
+                <div class="cstack__card" data-idx="7"><img src="images/team/PHOTO8.jpg"  alt="Photo 8"  draggable="false"></div>
+                <div class="cstack__card" data-idx="8"><img src="images/team/PHOTO9.jpg"  alt="Photo 9"  draggable="false"></div>
+                <div class="cstack__card" data-idx="9"><img src="images/team/PHOTO10.jpg" alt="Photo 10" draggable="false"></div>
+                <div class="cstack__card" data-idx="10"><img src="images/team/PHOTO11.jpg" alt="Photo 11" draggable="false"></div>
+                <div class="cstack__card" data-idx="11"><img src="images/team/PHOTO12.jpg" alt="Photo 12" draggable="false"></div>
+                <div class="cstack__card" data-idx="12"><img src="images/team/PHOTO14.jpg" alt="Photo 14" draggable="false"></div>
+            </div>
+            <div class="cstack__dots" id="galleryStackDots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     ACTUALITÉS / AVIS
+======================================== -->
+<section class="news section" id="actualites">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__pill section__pill--center">
+                <i class="fab fa-google"></i> Avis Google
+            </span>
+            <h2 class="section__title section__title--center">Ce que disent nos membres</h2>
+            <p class="news__lead">Ils ont joué chez nous — voici ce qu'ils en pensent</p>
+        </div>
+
+        <div class="news__grid">
+
+            <div class="news__card reveal">
+                <div class="news__card-head">
+                    <div class="news__avatar news__avatar--f">F</div>
+                    <div class="news__meta">
+                        <strong>Françoise Jumeau</strong>
+                        <span class="news__google-badge"><i class="fab fa-google"></i> Avis de Google</span>
+                    </div>
+                </div>
+                <div class="news__stars">★★★★★</div>
+                <p class="news__date">Il y a 6 mois · Visité en octobre 2025</p>
+                <p class="news__text">Un prof de talent et le meilleur qu'il ait jamais eu (dixit mon petit fils).</p>
+            </div>
+
+            <div class="news__card reveal">
+                <div class="news__card-head">
+                    <div class="news__avatar news__avatar--e">E</div>
+                    <div class="news__meta">
+                        <strong>Eric *</strong>
+                        <span class="news__google-badge"><i class="fab fa-google"></i> Avis de Google</span>
+                    </div>
+                </div>
+                <div class="news__stars">★★★★★</div>
+                <p class="news__date">Visité en mars 2023</p>
+                <p class="news__text">Très bon club de tennis. Avec de bonnes installations. Les autres installations pour le foot et le rugby sont parfaites.</p>
+            </div>
+
+            <div class="news__card reveal">
+                <div class="news__card-head">
+                    <div class="news__avatar news__avatar--n">N</div>
+                    <div class="news__meta">
+                        <strong>Nicolas Brelaud</strong>
+                        <span class="news__google-badge"><i class="fab fa-google"></i> Avis de Google</span>
+                    </div>
+                </div>
+                <div class="news__stars">★★★★★</div>
+                <p class="news__date">Il y a 11 mois · Visité en juin 2025</p>
+                <p class="news__text">Le meilleur club du monde</p>
+            </div>
+
+            <div class="news__card reveal">
+                <div class="news__card-head">
+                    <div class="news__avatar news__avatar--b">B</div>
+                    <div class="news__meta">
+                        <strong>Béhémoth Seth</strong>
+                        <span class="news__google-badge"><i class="fab fa-google"></i> Avis de Google</span>
+                    </div>
+                </div>
+                <div class="news__stars">★★★★★</div>
+                <p class="news__date">Il y a 3 mois · Visité en janvier 2026</p>
+                <p class="news__text">Superbe plateau sportif</p>
+            </div>
+
+            <div class="news__card reveal">
+                <div class="news__card-head">
+                    <div class="news__avatar news__avatar--f">F</div>
+                    <div class="news__meta">
+                        <strong>François Vermande</strong>
+                        <span class="news__google-badge"><i class="fab fa-google"></i> Avis de Google</span>
+                    </div>
+                </div>
+                <div class="news__stars">★★★★★</div>
+                <p class="news__date">Il y a 2 ans · Visité en mai 2023</p>
+                <p class="news__text">Club très sympa et belle installation</p>
+            </div>
+
+        </div>
+
+        <div class="news__cta reveal">
+            <a href="https://www.google.com/maps/search/Tennis+Club+Migennes" class="btn-cto" target="_blank" rel="noopener noreferrer">
+                <span class="btn-cto__text"><i class="fab fa-google"></i> Voir tous les avis</span>
+                <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     BANDE CTA RÉSERVATION (fond citron)
+======================================== -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-band__inner reveal">
+            <div class="cta-band__text">
+                <h2>Prêt à jouer ?</h2>
+                <p>Réservez votre court en ligne via la plateforme Tenup, rapidement et simplement.</p>
+            </div>
+            <a href="#" class="btn-cto btn-cto--inv" id="ctaBandReserve">
+                <span class="btn-cto__text">Réserver sur Tenup</span>
+                <span class="btn-cto__circle btn-cto__circle--dark"><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     CONTACT
+======================================== -->
+<section class="contact section" id="contact">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__pill section__pill--center">Contact</span>
+            <h2 class="section__title section__title--center">Nous trouver</h2>
+        </div>
+        <div class="contact__grid">
+            <div class="contact__info reveal">
+                <div class="contact__item">
+                    <div class="contact__icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4>Adresse</h4>
+                        <p>Stade Lucien Masson<br>Rue Yves du Manoir<br>89400 Migennes</p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@tcmigennes.fr">contact@tcmigennes.fr</a></p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__icon"><i class="fab fa-facebook"></i></div>
+                    <div>
+                        <h4>Facebook</h4>
+                        <p><a href="#" id="contactFbLink" target="_blank" rel="noopener">Notre page Facebook</a></p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__icon"><i class="fas fa-calendar-check"></i></div>
+                    <div>
+                        <h4>Réservation</h4>
+                        <p>Via <a href="#" id="contactTenupLink">Tenup</a></p>
+                    </div>
+                </div>
+                <a href="#" class="btn-cto" id="contactReserveBtn" style="margin-top:.5rem;">
+                    <span class="btn-cto__text">Réserver un court</span>
+                    <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="contact__map reveal">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=3.48,47.956,3.55,47.984&layer=mapnik&marker=47.9703,3.5194"
+                    width="100%" height="440"
+                    style="border:0;border-radius:16px;display:block;"
+                    allowfullscreen loading="lazy"
+                    title="Tennis Club de Migennes – Carte">
+                </iframe>
+                <a href="https://maps.google.com/maps?daddr=Rue+Yves+du+Manoir,+89400+Migennes" class="map__directions" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-location-arrow"></i> M'y emmener
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+<footer class="footer">
+    <div class="footer__main">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#accueil" class="footer__logo">
+                        <img src="images/logomi.png" alt="TC Migennes" class="footer__logo-img">
+                        ASUC <strong>Migennes</strong>
+                    </a>
+                    <p>Club de Tennis &amp; Padel de Migennes dans l'Yonne. Loisir &amp; Compétition pour tous les niveaux.</p>
+                    <div class="footer__social">
+                        <a href="#" id="footerFbLink" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#tennis">Tennis</a></li>
+                        <li><a href="#padel">Padel</a></li>
+                        <li><a href="#club-house">Club House</a></li>
+                        <li><a href="#equipe">Notre Équipe</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav">
+                    <h4>Nos sports</h4>
+                    <ul>
+                        <li><a href="#tennis">Tennis</a></li>
+                        <li><a href="#padel">Padel</a></li>
+                        <li><a href="#club-house">Club House</a></li>
+                        <li><a href="#membres">Le club</a></li>
+                    </ul>
+                </div>
+                <div class="footer__reserve-col">
+                    <h4>Réserver</h4>
+                    <p>Stade Lucien Masson, Rue Yves du Manoir, 89400 Migennes</p>
+                    <a href="#" class="btn-cto btn-cto--sm" id="footerReserveBtn">
+                        <span class="btn-cto__text">Réserver sur Tenup</span>
+                        <span class="btn-cto__circle"><i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <p>&copy; 2025 Tennis Club de Migennes. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
