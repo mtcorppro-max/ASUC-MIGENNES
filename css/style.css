@@ -67,15 +67,11 @@ ul   { list-style: none; }
 .btn-cto:hover .btn-cto__text   { background: var(--blue-dk); }
 .btn-cto:hover .btn-cto__circle { background: var(--dark2); transform: rotate(45deg); }
 
-/* variante hero : texte blanc sur sombre + cercle bleu */
-.btn-cto--hero .btn-cto__text   { background: var(--dark); color: var(--white); }
+/* variante hero : pill blanche + cercle bleu */
+.btn-cto--hero .btn-cto__text   { background: var(--white); color: var(--dark); }
 .btn-cto--hero .btn-cto__circle { background: var(--blue); color: var(--white); }
-.btn-cto--hero:hover .btn-cto__text   { background: var(--dark2); }
+.btn-cto--hero:hover .btn-cto__text   { background: #f0f0f0; }
 .btn-cto--hero:hover .btn-cto__circle { background: var(--blue-dk); }
-
-/* bouton hero sur fond sombre (section tennis) : pill blanche */
-.sport-dark .btn-cto--hero .btn-cto__text  { background: var(--white); color: var(--dark); }
-.sport-dark .btn-cto--hero:hover .btn-cto__text { background: #f0f0f0; }
 
 /* cercle bleu forcé */
 .btn-cto__circle--lime { background: var(--blue); color: var(--white); }
