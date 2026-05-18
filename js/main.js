@@ -387,3 +387,15 @@ async function loadFacebookPosts() {
 }
 
 loadFacebookPosts();
+
+/* =============================================================
+   BOUTON M'Y EMMENER – Plans sur iOS, Google Maps sinon
+   ============================================================= */
+const directionsBtn = document.getElementById('directionsBtn');
+if (directionsBtn) {
+    const address = 'Rue Yves du Manoir, 89400 Migennes';
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    directionsBtn.href = isIOS
+        ? `maps://maps.apple.com/?daddr=${encodeURIComponent(address)}`
+        : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+}
