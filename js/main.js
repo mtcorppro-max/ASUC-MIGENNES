@@ -19,6 +19,7 @@ const CONFIG = {
 const reserveIds = [
     'reserveBtn', 'heroReserveBtn', 'tennisBtnReserve',
     'padelBtnReserve', 'ctaBandReserve', 'contactReserveBtn', 'footerReserveBtn', 'tarifsReserveBtn',
+    'mobileReserveBtn',
 ];
 reserveIds.forEach(id => {
     const el = document.getElementById(id);
@@ -57,27 +58,33 @@ window.addEventListener('scroll', () => {
 /* =============================================================
    MENU MOBILE
    ============================================================= */
-const hamburger = document.getElementById('hamburger');
-const navMenu   = document.getElementById('navMenu');
+const hamburger  = document.getElementById('hamburger');
+const navMenu    = document.getElementById('navMenu');
+const navOverlay = document.getElementById('navOverlay');
+
+function openMenu() {
+    hamburger?.classList.add('open');
+    navMenu?.classList.add('open');
+    navOverlay?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    hamburger?.classList.remove('open');
+    navMenu?.classList.remove('open');
+    navOverlay?.classList.remove('open');
+    document.body.style.overflow = '';
+}
 
 hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMenu?.classList.toggle('open');
+    navMenu?.classList.contains('open') ? closeMenu() : openMenu();
 });
 
 navMenu?.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger?.classList.remove('open');
-        navMenu?.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
 });
 
-document.addEventListener('click', e => {
-    if (!hamburger?.contains(e.target) && !navMenu?.contains(e.target)) {
-        hamburger?.classList.remove('open');
-        navMenu?.classList.remove('open');
-    }
-});
+navOverlay?.addEventListener('click', closeMenu);
 
 /* =============================================================
    SMOOTH SCROLL

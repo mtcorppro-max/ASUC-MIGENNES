@@ -14,6 +14,8 @@
 </head>
 <body>
 
+<div class="nav__overlay" id="navOverlay"></div>
+
 <!-- ========================================
      NAVIGATION FLOTTANTE (pill)
 ======================================== -->
@@ -26,15 +28,24 @@
             </a>
 
             <ul class="nav__menu" id="navMenu">
-                <li><a href="#accueil"    class="nav__link">Accueil</a></li>
-                <li><a href="#tennis"     class="nav__link">Tennis</a></li>
-                <li><a href="#padel"         class="nav__link">Padel</a></li>
-                <li><a href="#inscriptions" class="nav__link">Inscriptions</a></li>
-                <li><a href="#club-house"   class="nav__link">Club House</a></li>
-                <li><a href="#equipe"     class="nav__link">Notre Équipe</a></li>
-                <li><a href="#galerie"    class="nav__link">Galerie</a></li>
-                <li><a href="#actualites" class="nav__link">Avis</a></li>
-                <li><a href="#contact"    class="nav__link">Contact</a></li>
+                <li class="nav__menu-header">
+                    <img src="images/logomi.png" alt="ASUC Migennes" class="nav__menu-logo">
+                    <span class="nav__menu-club">ASUC <strong>Migennes</strong></span>
+                </li>
+                <li><a href="#accueil"      class="nav__link"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+                <li><a href="#tennis"       class="nav__link"><i class="fas fa-baseball-ball"></i><span>Tennis</span></a></li>
+                <li><a href="#padel"        class="nav__link"><i class="fas fa-table-tennis-paddle-ball"></i><span>Padel</span></a></li>
+                <li><a href="#inscriptions" class="nav__link"><i class="fas fa-clipboard-list"></i><span>Inscriptions</span></a></li>
+                <li><a href="#club-house"   class="nav__link"><i class="fas fa-mug-hot"></i><span>Club House</span></a></li>
+                <li><a href="#equipe"       class="nav__link"><i class="fas fa-users"></i><span>Notre Équipe</span></a></li>
+                <li><a href="#galerie"      class="nav__link"><i class="fas fa-images"></i><span>Galerie</span></a></li>
+                <li><a href="#actualites"   class="nav__link"><i class="fas fa-star"></i><span>Avis</span></a></li>
+                <li><a href="#contact"      class="nav__link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                <li class="nav__menu-footer">
+                    <a href="#" class="nav__menu-reserve" id="mobileReserveBtn">
+                        <i class="fas fa-calendar-check"></i> Réserver un court
+                    </a>
+                </li>
             </ul>
 
             <a href="#" class="nav__cta" id="reserveBtn">Réserver un court</a>
