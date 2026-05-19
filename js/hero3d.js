@@ -48,17 +48,24 @@ const spatial = Array.from({ length: BALL_COUNT }, (_, i) => ({
     y: Math.cos(i * 1.618 + Math.PI/3) * ((i + 1) % 4) * 0.9,
 }));
 
-// Ball state
-const balls = Array.from({ length: BALL_COUNT }, (_, i) => ({
-    mesh:  null,
-    z:     -(DEPTH / BALL_COUNT) * i - 3,   // spread across depth at start
-    x:     spatial[i].x,
-    y:     spatial[i].y,
-    rx:    Math.random() * Math.PI * 2,
-    ry:    Math.random() * Math.PI * 2,
-    rsx:   (Math.random() - 0.5) * 1.5,     // rotation speed X
-    rsy:   (Math.random() - 0.5) * 1.5,     // rotation speed Y
-}));
+// Ball state — each ball has a start X (far) and end X (close) for lateral drift
+const balls = Array.from({ length: BALL_COUNT }, (_, i) => {
+    const xBase = spatial[i].x;
+    // Drift 3–7 units to the right as balls approach (negative = left, rare)
+    const driftDir  = i % 5 === 0 ? -1 : 1;
+    const driftDist = 3 + (i % 4) * 1.2;
+    return {
+        mesh:   null,
+        z:      -(DEPTH / BALL_COUNT) * i - 3,
+        xStart: xBase,
+        xEnd:   xBase + driftDir * driftDist,
+        y:      spatial[i].y,
+        rx:     Math.random() * Math.PI * 2,
+        ry:     Math.random() * Math.PI * 2,
+        rsx:    (Math.random() - 0.5) * 1.5,
+        rsy:    (Math.random() - 0.5) * 1.5,
+    };
+});
 
 // Load GLB
 new GLTFLoader().load(
@@ -123,7 +130,11 @@ function animate() {
         ball.rx += ball.rsx * dt;
         ball.ry += ball.rsy * dt;
 
-        ball.mesh.position.set(ball.x, ball.y, ball.z);
+        // Interpolate X from start (far) to end (close) for lateral drift
+        const progress = Math.max(0, Math.min(1, (ball.z + DEPTH) / DEPTH));
+        const currentX = ball.xStart + (ball.xEnd - ball.xStart) * progress;
+
+        ball.mesh.position.set(currentX, ball.y, ball.z);
         ball.mesh.rotation.set(ball.rx, ball.ry, 0);
 
         // Opacity: fade in at far end, fade out when very close
