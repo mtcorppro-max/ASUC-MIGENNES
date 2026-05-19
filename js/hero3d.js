@@ -1,5 +1,6 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { GLTFLoader }  from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const canvas = document.getElementById('hero3d');
 if (!canvas) throw new Error('hero3d canvas not found');
@@ -67,8 +68,12 @@ const balls = Array.from({ length: BALL_COUNT }, (_, i) => {
     };
 });
 
-// Load GLB
-new GLTFLoader().load(
+// Load GLB (Draco-compressed)
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/libs/draco/');
+const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader);
+loader.load(
     'models/tennis_ball.glb',
     gltf => {
         // Compute natural size once to auto-scale
