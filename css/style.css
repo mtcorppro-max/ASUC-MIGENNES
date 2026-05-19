@@ -327,14 +327,36 @@ ul   { list-style: none; }
     z-index: 3;
     margin-top: 3rem;
 }
+@keyframes hero-shimmer {
+    0%   { background-position: 200% 0%; }
+    100% { background-position: -200% 0%; }
+}
+
 .hero__card {
-    background: rgba(20,20,20,.72);
+    background: linear-gradient(
+        110deg,
+        rgba(20,20,20,.72) 40%,
+        rgba(60,65,80,.78) 50%,
+        rgba(20,20,20,.72) 60%
+    );
+    background-size: 200% 100%;
+    animation: hero-shimmer 3s infinite linear;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,.10);
     border-radius: 20px;
     padding: 1.4rem 1.6rem;
     min-width: 220px;
+}
+.hero__card--white {
+    background: linear-gradient(
+        110deg,
+        rgba(255,255,255,.92) 40%,
+        rgba(220,235,255,.97) 50%,
+        rgba(255,255,255,.92) 60%
+    );
+    background-size: 200% 100%;
+    animation: hero-shimmer 3s infinite linear;
 }
 
 .hero__card-top {
@@ -383,9 +405,6 @@ ul   { list-style: none; }
     color: rgba(255,255,255,.85);
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-.hero__card--white {
-    background: rgba(255,255,255,.92);
 }
 .hero__card--white .hero__card-icon     { background: rgba(0,0,0,.07); }
 .hero__card--white .hero__card-icon img { filter: none; }
