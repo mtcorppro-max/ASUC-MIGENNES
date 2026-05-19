@@ -115,11 +115,26 @@ function resize() {
 window.addEventListener('resize', resize, { passive: true });
 resize();
 
-// Animation loop
+// Animation loop — paused when hero is off-screen
 const clock = new THREE.Clock();
+let animFrameId = null;
 
-function animate() {
-    requestAnimationFrame(animate);
+function startLoop() {
+    if (animFrameId) return;
+    clock.getDelta(); // reset delta to avoid jump on resume
+    loop();
+}
+
+function stopLoop() {
+    if (animFrameId) { cancelAnimationFrame(animFrameId); animFrameId = null; }
+}
+
+new IntersectionObserver(entries => {
+    entries[0].isIntersecting ? startLoop() : stopLoop();
+}, { threshold: 0.01 }).observe(canvas.parentElement);
+
+function loop() {
+    animFrameId = requestAnimationFrame(loop);
     const dt = Math.min(clock.getDelta(), 0.05); // cap delta to avoid jumps
 
     balls.forEach(ball => {
@@ -155,4 +170,4 @@ function animate() {
 
     renderer.render(scene, camera);
 }
-animate();
+startLoop();
